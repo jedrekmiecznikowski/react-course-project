@@ -1,4 +1,4 @@
-# Project Title
+# MTG Art Quiz
 
 Simple overview of use/purpose.
 
