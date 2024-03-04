@@ -1,6 +1,7 @@
-# MTG Art Quiz
+# Dungeons and dragons equipment tracker
 
-Simple overview of use/purpose.
+When playing RPGs with pen-and-paper it's difficult to keep track of what equipment the party has.
+The plan is to create a website that is better than paper and better than a spreadsheet thanks to connectivity with an open DnD 5e API.
 
 ## Description
 
