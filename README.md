@@ -54,51 +54,25 @@ Describe here in detail the weekly implementations
 
 Describe here in detail the weekly implementations
 
-### Week 1 Progress
-
-- **What did I implement this week?**
-  - [ ] Feature A
-  - [ ] Feature B
-  - [ ] Bug fixes
-  - [ ] Refactoring
-  - [ ] The implementations above are examples, delete them and add yours
-- **What obstacles or roadblocks did I face this week?**
-
-  - [ ] Technical challenges
-  - [ ] Time constraints
-  - [ ] Communication issues
-  - [ ] Other (please specify)
-  - [ ] The implementations above are examples, delete them and add yours
-
-- **Is there anything in particular that I would benefit from reviewing with the code instructor to enhance or solve my obstacles or roadblocks of the week?**
-  - [ ] Yes
-  - [ ] No
-  - [ ] Not sure, but would like guidance
-  - [ ] The implementations above are examples, delete them and add yours
-
-### Week 2 Progress
+### Week 1 & 2 Progress
 
 - **What did I implement this week?**
 
-  - [ ] Feature A
-  - [ ] Feature B
-  - [ ] Bug fixes
-  - [ ] Refactoring
-  - [ ] The implementations above are examples, delete them and add yours
+  - [x] Top Bar
+  - [x] Popup form on "Create Bag"
+  - [x] Some styling, logo, github icon
+  - [x] Figured out the project idea!
 
 - **What obstacles or roadblocks did I face this week?**
 
-  - [ ] Technical challenges
-  - [ ] Time constraints
-  - [ ] Communication issues
-  - [ ] Other (please specify)
-  - [ ] The implementations above are examples, delete them and add yours
+  - [ ] I'm terrible at CSS
+  - [ ] First time working with MUI
+  - [ ] Need hooks to move forward
 
 - **Is there anything in particular that I would benefit from reviewing with the code instructor to enhance or solve my obstacles or roadblocks of the week?**
-  - [ ] Yes
-  - [ ] No
-  - [ ] Not sure, but would like guidance
-  - [ ] The implementations above are examples, delete them and add yours
+  - [ ] Hooks will definitely help
+  - [ ] Show some more real world projects at end of class?
+  - [ ] For now, I've only coded the landing page which is not the actual application. I would like guidance on how to move to the next page and how should it be structured (i've got some ideas)
 
 ### Week 3 Progress
 
