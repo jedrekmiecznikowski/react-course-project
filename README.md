@@ -72,6 +72,7 @@ Describe here in detail the weekly implementations
 - **Is there anything in particular that I would benefit from reviewing with the code instructor to enhance or solve my obstacles or roadblocks of the week?**
   - [ ] Hooks will definitely help
   - [ ] Show some more real world projects at end of class?
+  - [ ] Can i work with a global color theme? I want this light brown + milky white theme to cascade through the entirety of my project but not sure how to do that
   - [ ] For now, I've only coded the landing page which is not the actual application. I would like guidance on how to move to the next page and how should it be structured (i've got some ideas)
 
 ### Week 3 Progress
