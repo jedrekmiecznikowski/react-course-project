@@ -4,6 +4,7 @@ import './App.css'
 import { Button } from './components/button'
 import TopBar from './components/TopBar'
 import FormDialog from './components/Dialog'
+import {ThemeToggle} from './components/ThemeToggle'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,19 +12,7 @@ function App() {
   return (
     <>
     <TopBar />
-    <div className='main'>
-      <div>
-        <a href="https://www.dndbeyond.com/magic-items/4581-bag-of-holding" target="_blank">
-          <img src={bagimg} className="logo" alt="satchel logo" />
-        </a>
-      </div>
-      <h1>Bag of Holding</h1>
-      
-      <div className="card">
-        <Button label="Open Bag" />        
-        <FormDialog label= "Create Bag"/>
-      </div>
-    </div>
+    <ThemeToggle />
     </>
   )
 }
