@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useContext} from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import axios from 'axios';
@@ -21,10 +21,8 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import  QuantityInput from './QuantityInput';
-
-
-
+import QuantityInput from './QuantityInput';
+import RowsContext from '../context/RowsContext';
 
 
 export default function ItemDialog({characterList}) {
@@ -32,9 +30,14 @@ export default function ItemDialog({characterList}) {
   const [itemNames, setItemNames] = useState([]);
   const [itemIndexes, setItemIndexes] = useState([]);
   const [magicItemIndexes, setMagicItemIndexes] = useState([]);
-    const [value, setValue] = useState(1);
+  const [value, setValue] = useState(1);
 
   const [open, setOpen] = useState(false);
+  const [isItemPicked, setIsItemPicked] = useState(false);
+  const [autocompleteValue, setAutocompleteValue] = useState(''); // Add this to your state hooks
+  const [quantity, setQuantity] = useState(1);
+
+  const {rows, setRows} = useContext(RowsContext);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -46,8 +49,61 @@ export default function ItemDialog({characterList}) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    handleClose();
-  }
+    const formData = new FormData(event.currentTarget);
+    const formJson = Object.fromEntries(formData.entries());
+    console.log(formJson);
+    // pick itemName that is not undefined or ''
+    const fetchItemDetails = async () => {
+        let response;
+        let newRow;
+        if (formJson['item-name-custom']) {
+            newRow = {       
+                id:  formJson['item-name-custom'].replace(/\s+/g, '-').toLowerCase() + '-' + formJson['carried-by'],
+                name: formJson['item-name-custom'],
+                quantity: quantity, // Assuming you have a quantity field in your form
+                'carried-by': formJson['carried-by'], // Assuming you have a carried-by field in your form
+                notes: formJson['notes'],
+            }; 
+        } else {
+            if (magicItemIndexes.includes(
+                itemIndexes[itemNames.indexOf(autocompleteValue)]
+                )) {
+                response = await axios.get('https://www.dnd5eapi.co/api/magic-items/' + itemIndexes[itemNames.indexOf(autocompleteValue)]);
+                
+            } else {
+                response = await axios.get('https://www.dnd5eapi.co/api/equipment/' + itemIndexes[itemNames.indexOf(autocompleteValue)]);
+                
+            } 
+            newRow = {       
+                id:  response.data.index + '-' + formJson['carried-by'],
+                name: response.data.name,
+                cost: response.data.cost?.quantity,
+                quantity: quantity, // Assuming you have a quantity field in your form
+                weight: response.data.weight,
+                'carried-by': formJson['carried-by'], // Assuming you have a carried-by field in your form
+                'rarity-name': response.data.rarity?.name,
+                notes: formJson['notes'],
+            }; 
+        }
+
+        // Check if a row with the same id already exists
+        let existingRow = rows.find(row => row.id === newRow.id);
+
+        if (existingRow) {
+        // If it does, increase the quantity of that row by 1
+        existingRow.quantity += quantity;
+        console.log(existingRow.quantity);
+        setRows([...rows]);
+        } else {
+        // If it doesn't, add the new row to rows
+        setRows(prevRows => [...prevRows, newRow]);
+        }
+    }
+    fetchItemDetails();
+    console.log(rows);
+    handleClose(); 
+}  
+
 
   useEffect(() => {
     const fetchItemNames = async () => {
@@ -73,6 +129,8 @@ export default function ItemDialog({characterList}) {
     fetchItemNames();
   },[]);  
 
+
+
 return (
     <React.Fragment>
       <Button variant="outlined" onClick={handleClickOpen}>
@@ -92,6 +150,8 @@ return (
           <Autocomplete
         freeSolo
         id="items-search"
+        name = "items-search"
+        value={autocompleteValue}
         disableClearable
         options={(Array.from(new Set(itemNames))).sort()}
         renderOption={(props, option, { selected }) => (
@@ -116,9 +176,14 @@ return (
                 }}
             />
         )}
+        onInputChange={(event, value) => {
+            setAutocompleteValue(value);
+            setIsItemPicked(!!value);
+
+        }}
     />
      <br></br>
-     <Accordion>
+     <Accordion disabled={isItemPicked}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2-content"
@@ -128,8 +193,8 @@ return (
           <TextField
             autoFocus            
             margin="dense"
-            id="name"
-            name = "name"
+            id="item-name-custom"
+            name = "item-name-custom"
             label="Type your item name here"
             fullWidth
             variant="standard"
@@ -155,15 +220,16 @@ return (
         </AccordionDetails>
 
         </Accordion>
-        <QuantityInput/> 
-          <FormControl>
+        <FormControl>
+        <QuantityInput quantity = {quantity} setQuantity = {setQuantity}/> 
+          
                
             <br></br>  
             <FormLabel id="demo-row-radio-buttons-group-label">Who carries it?</FormLabel>
             <RadioGroup              
               row
               aria-labelledby="demo-row-radio-buttons-group-label"
-              name="row-radio-buttons-group"
+              name="carried-by"
             >
               {characterList.map((character) => (
                 <FormControlLabel key={character} value={character} control={<Radio />} label={character} />

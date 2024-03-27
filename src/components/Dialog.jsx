@@ -25,15 +25,19 @@ export default function FormDialog({label}) {
     setOpen(false);
   };
 
+  
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const formJson = Object.fromEntries(formData.entries());
     const bagName = formJson.name;
-    // onBagNameChange(bagName);
+    const bagNameHyphenated = bagName.replace(/\s+/g, '-').toLowerCase();
+    const useTemplate = formJson['row-radio-buttons-group'];
+    const url = useTemplate === '1' ? `/bag/${bagNameHyphenated}?template=${useTemplate}` : `/bag/${bagNameHyphenated}`;
     handleClose();
     // then navigate
-    navigate(`/bag/${bagName}`, {replace: true});
+    navigate(url, {replace: true});
   }
 
   return (
