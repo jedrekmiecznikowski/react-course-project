@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import {useState} from 'React';
+import {useState} from 'react';
 import Drawer from './Drawer';
 
 export default function TopBar({bagName}) {
