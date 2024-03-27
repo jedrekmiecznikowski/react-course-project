@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import bagimg from './assets/bag.png'
 import './App.css'
-import { Button } from './components/button'
 import FormDialog from './components/Dialog'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import {routes} from './routes/routes'

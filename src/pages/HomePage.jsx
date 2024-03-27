@@ -1,7 +1,7 @@
 import bagimg from '../assets/bag.png'
 import FormDialog from '../components/Dialog'
 import TopBar from '../components/TopBar'
-import { Button } from '../components/button'
+import OpenBag from '../components/OpenBag'
 import '../App.css'
 
 export const HomePage = (handleBagNameChange) => {
@@ -18,7 +18,8 @@ export const HomePage = (handleBagNameChange) => {
     
     <div className="card">
       
-      <Button label="Open Bag" />        
+      <OpenBag label = "Open Bag"/>  
+      <div style={{ margin: '10px' }}></div>     
       <FormDialog label= "Create Bag" onBagNameChange={handleBagNameChange}/>
     </div>
   </div>

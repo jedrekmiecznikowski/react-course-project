@@ -28,16 +28,17 @@ const NumberInput = React.forwardRef(function CustomNumberInput(props, ref) {
   );
 });
 
-export default function QuantityInput() {
-  const [value, setValue] = React.useState(null);
+export default function QuantityInput({quantity, setQuantity}) {
+  
 return (
     <>
     <div style={{ margin: '10px 0' }}>Quantity</div>
     <NumberInput
-        aria-label="Demo number input"
+        aria-label="quantity"
+        name = "quantity"
         placeholder="Type a number…"
-        value={value}
-        onChange={(event, val) => setValue(val)}
+        value={quantity}
+        onChange={(event, val) => setQuantity(val)}
     />
     </>
 );
