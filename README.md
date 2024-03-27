@@ -75,73 +75,26 @@ Describe here in detail the weekly implementations
   - [ ] Can i work with a global color theme? I want this light brown + milky white theme to cascade through the entirety of my project but not sure how to do that
   - [ ] For now, I've only coded the landing page which is not the actual application. I would like guidance on how to move to the next page and how should it be structured (i've got some ideas)
 
-### Week 3 Progress
-
+### Week 3,4,5 Progress
 - **What did I implement this week?**
-  - [ ] Feature A
-  - [ ] Feature B
-  - [ ] Bug fixes
-  - [ ] Refactoring
-  - [ ] The implementations above are examples, delete them and add yours
+  - [ ] Routing
+  - [ ] Add items dialog
+  - [ ] Add characters dialog
+  - [ ] Communication between dialogs
+  - [ ] Api connection
+  - [ ] Search bar
 - **What obstacles or roadblocks did I face this week?**
 
-  - [ ] Technical challenges
-  - [ ] Time constraints
-  - [ ] Communication issues
-  - [ ] Other (please specify)
-  - [ ] The implementations above are examples, delete them and add yours
+  - [ ] Started with MUI which I havent worked with before
+  - [ ] Errors arising from using ready made components 
+  - [ ] Very messy CSS management - i want to learn how to do this properly
+  - [ ] Some minor visual bugs in Add item form
 
 - **Is there anything in particular that I would benefit from reviewing with the code instructor to enhance or solve my obstacles or roadblocks of the week?**
   - [ ] Yes
   - [ ] No
-  - [ ] Not sure, but would like guidance
-  - [ ] The implementations above are examples, delete them and add yours
+  - [x] Not sure, but would like guidance
 
-### Week 4 Progress
-
-- **What did I implement this week?**
-  - [ ] Feature A
-  - [ ] Feature B
-  - [ ] Bug fixes
-  - [ ] Refactoring
-  - [ ] The implementations above are examples, delete them and add yours
-- **What obstacles or roadblocks did I face this week?**
-
-  - [ ] Technical challenges
-  - [ ] Time constraints
-  - [ ] Communication issues
-  - [ ] Other (please specify)
-  - [ ] The implementations above are examples, delete them and add yours
-
-- **Is there anything in particular that I would benefit from reviewing with the code instructor to enhance or solve my obstacles or roadblocks of the week?**
-  - [ ] Yes
-  - [ ] No
-  - [ ] Not sure, but would like guidance
-  - [ ] The implementations above are examples, delete them and add yours
-
-### Week 5 Progress
-
-- **What did I implement this week?**
-
-  - [ ] Feature A
-  - [ ] Feature B
-  - [ ] Bug fixes
-  - [ ] Refactoring
-  - [ ] The implementations above are examples, delete them and add yours
-
-- **What obstacles or roadblocks did I face this week?**
-
-  - [ ] Technical challenges
-  - [ ] Time constraints
-  - [ ] Communication issues
-  - [ ] Other (please specify)
-  - [ ] The implementations above are examples, delete them and add yours
-
-- **Is there anything in particular that I would benefit from reviewing with the code instructor to enhance or solve my obstacles or roadblocks of the week?**
-  - [ ] Yes
-  - [ ] No
-  - [ ] Not sure, but would like guidance
-  - [ ] The implementations above are examples, delete them and add yours
 
 ### Week 6 Progress
 
