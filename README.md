@@ -86,12 +86,12 @@ Describe here in detail the weekly implementations
 ### Week 6 Progress
 
 - **What did I implement this week?**
-  - [ x] Entire data storing logic, rows are drilled with context (possibly unnecessary)
-  - [x ] Template ?variable in url and useLocation
-  - [x ] Open Bag dummy flow (no backend)
-  - [x ] Refactoring (correcting some mistakes)
-  - [ x] Toggle between character/bag views
-  - [ x] Side menu
+  - [x] Entire data storing logic, rows are drilled with context (possibly unnecessary)
+  - [x] Template ?variable in url and useLocation
+  - [x] Open Bag dummy flow (no backend)
+  - [x] Refactoring (correcting some mistakes)
+  - [x] Toggle between character/bag views
+  - [x] Side menu
 - **What obstacles or roadblocks did I face this week?**
 
   - [ ] Did not manage to get a good look on mobile despite using MUI (lack of design knowledge that i will work on)
@@ -102,7 +102,7 @@ Describe here in detail the weekly implementations
 - **Is there anything in particular that I would benefit from reviewing with the code instructor to enhance or solve my obstacles or roadblocks of the week?**
   - [ ] Yes
   - [ ] No
-  - [x ] Not sure, but would like guidance
+  - [x] Not sure, but would like guidance
 
 
 ## License
