@@ -96,6 +96,7 @@ Describe here in detail the weekly implementations
 
   - [ ] Did not manage to get a good look on mobile despite using MUI (lack of design knowledge that i will work on)
   - [ ] The look and feel is inconsistent
+  - [ ] No dark theme :(
         
 - **Is there anything in particular that I would benefit from reviewing with the code instructor to enhance or solve my obstacles or roadblocks of the week?**
   - [ ] Yes
