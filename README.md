@@ -1,5 +1,7 @@
 # Dungeons and dragons equipment tracker
 
+https://bag-of-holding.netlify.app/
+
 When playing RPGs with pen-and-paper it's difficult to keep track of what equipment the party has.
 The plan is to create a website that is better than paper and better than a spreadsheet thanks to connectivity with an open DnD 5e API.
 
@@ -124,10 +126,4 @@ This project, scaffolded using the Vite engine, is for educational purposes. Thi
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
-
-- [awesome-readme](https://github.com/matiassingers/awesome-readme)
-- [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-- [dbader](https://github.com/dbader/readme-template)
-- [zenorocha](https://gist.github.com/zenorocha/4526327)
-- [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+I have been inspired by existing work by folks making https://www.bagofholding.cloud/ 
