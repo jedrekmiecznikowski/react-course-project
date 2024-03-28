@@ -18,35 +18,20 @@ An in-depth paragraph about your project and overview of use.
   - [Node.js](https://nodejs.org/) (version 12 or higher)
   - [React](https://reactjs.org/) (version 17 or higher)
   - [Vite](https://vitejs.dev/) (version 2 or higher)
-
-### Installing
-
-- How/where to download your program
-- Any modifications needed to be made to files/folders
+  - [MUI](https://mui.com/) (version 6 or higher)
+  - See package-lock.json
 
 ### Executing program
 
-- How to run the program
-- Step-by-step bullets
-
 ```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-
-```
-command to run if program contains helper info
+npm install
+npm run dev
 ```
 
 ## Author
 
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Jędrzej "Jed" Miecznikowski
+[@mlecznik](https://twitter.com/mlecznik)
 
 ## Weekly Project Progress
 
@@ -101,24 +86,22 @@ Describe here in detail the weekly implementations
 ### Week 6 Progress
 
 - **What did I implement this week?**
-  - [ ] Feature A
-  - [ ] Feature B
-  - [ ] Bug fixes
-  - [ ] Refactoring
-  - [ ] The implementations above are examples, delete them and add yours
+  - [ x] Entire data storing logic, rows are drilled with context (possibly unnecessary)
+  - [x ] Template ?variable in url and useLocation
+  - [x ] Open Bag dummy flow (no backend)
+  - [x ] Refactoring (correcting some mistakes)
+  - [ x] Toggle between character/bag views
+  - [ x] Side menu
 - **What obstacles or roadblocks did I face this week?**
 
-  - [ ] Technical challenges
-  - [ ] Time constraints
-  - [ ] Communication issues
-  - [ ] Other (please specify)
-  - [ ] The implementations above are examples, delete them and add yours
-
+  - [ ] Did not manage to get a good look on mobile despite using MUI (lack of design knowledge that i will work on)
+  - [ ] The look and feel is inconsistent
+        
 - **Is there anything in particular that I would benefit from reviewing with the code instructor to enhance or solve my obstacles or roadblocks of the week?**
   - [ ] Yes
   - [ ] No
-  - [ ] Not sure, but would like guidance
-  - [ ] The implementations above are examples, delete them and add yours
+  - [x ] Not sure, but would like guidance
+
 
 ## License
 
@@ -126,4 +109,4 @@ This project, scaffolded using the Vite engine, is for educational purposes. Thi
 
 ## Acknowledgments
 
-I have been inspired by existing work by folks making https://www.bagofholding.cloud/ 
+I have been inspired by existing work by folks that made https://www.bagofholding.cloud/ 
